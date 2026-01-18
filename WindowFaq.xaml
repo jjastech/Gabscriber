@@ -1,0 +1,181 @@
+﻿<Window x:Class="wpf3625_147pm.WindowFaq"        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf3625_147pm"
+        mc:Ignorable="d"
+        Title="WindowFaq"
+        x:Name="ResponsiveWindowFaq"
+        Height="525" 
+        Width="900"
+        MinWidth="225"
+        MinHeight="30" 
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"        
+        >
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" ResizeBorderThickness="10" />
+    </WindowChrome.WindowChrome>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" />
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10" />
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10" />
+            </Grid.ColumnDefinitions>
+            <Rectangle Grid.Column="0" Fill="LightBlue" />
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="350" />
+                </Grid.RowDefinitions>
+            </Grid>
+            <Rectangle Grid.Column="1" Fill="LightBlue" />
+            <Rectangle Grid.Column="2" Fill="LightBlue" />
+            <Rectangle Grid.Column="3" Fill="LightBlue" />
+        </Grid>
+        <Rectangle Grid.Row="1" Fill="LightBlue" Margin="0,464,0,0" Grid.RowSpan="2" RenderTransformOrigin="0.5,-0.498" />
+
+        <RichTextBox 
+            IsReadOnly="True"
+            x:Name="RichTextBoxFaq" 
+            Grid.Row="1"
+            FontSize="17" 
+            Margin="25,25,25,15"
+            Padding="25,25,15,25"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            ScrollViewer.VerticalScrollBarVisibility="Visible"
+            AcceptsReturn="True"
+        >
+            <RichTextBox.Resources>
+                <Style TargetType="Paragraph">
+                    <Setter Property="Margin" Value="0,20,0,0"/>
+                </Style>
+            </RichTextBox.Resources>
+
+            <FlowDocument>
+                <Paragraph>
+                    <Bold>Frequently Asked Questions (FAQ)</Bold>
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What is the Privacy Policy of Gabscriber?</Bold>
+                    <LineBreak/>
+                    Gabscriber app respects your privacy. It does not access, collect, or transmit personal information (data that could be used to identify a person).
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What is Gabscriber?</Bold>
+                    <LineBreak/>
+                    Gabscriber transcribes your spoken words into text in realtime. This app takes a break for just a second every 10 minutes. After the break, you can continue your transcription. There is no limit as to how many times you want to continue your transcription. English language only.
+                    <LineBreak/>
+                </Paragraph>
+
+
+                <Paragraph>
+                    <Bold>Where can I find my saved transcription?</Bold>
+                    <LineBreak/>
+                    If you click the "Save Transcription" button, you can find your transcription on the location you have chosen.
+                    <LineBreak/>
+                    <LineBreak/>
+                    If you click the "Stop Transcriber" button, your transcription is automatically save to File Explorer -> Documents Folder -> Gabscriber Folder with text file named "gabscriber_stop{timestamp}". Timestamp refers to transcription year, month, day, hour, minute, seconds.
+                    <LineBreak/>
+                    <LineBreak/>
+                    After every 10-minute app break, your transcription is automatically saved to File Explorer -> Documents Folder -> Gabscriber Folder with text file named "gabscriber_break{timestamp}".
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What are the requirements for this app to work?</Bold>
+                    <LineBreak/>
+                    The following are the 3 main requirements for this app to work:
+                    <LineBreak/>
+                    1. Microphone
+                    <LineBreak/>
+                    This app will not work without a microphone. Install a microphone and give this app access to your microphone via Microsoft Windows Settings -> Privacy -> Microphone (Turn on Microphone) -> Choose this app to access your microphone (Turn on Gabscriber).
+                    <LineBreak/>
+                    <LineBreak/>
+                    2. Internet Connection
+                    <LineBreak/>
+                    This app will not work without internet connection. This app uses Microsoft's online speech recognition technology. This technology requires an internet connection. If you go offline, this app will stop transcribing. If you are back online, this app will continue transcribing.
+                    <LineBreak/>
+                    <LineBreak/>
+                    3. Microsoft's Speech
+                    <LineBreak/>
+                    This app will not work without Microsoft's Speech. To access Microsoft Speech, go to Settings -> Privacy -> Speech (Turn on Online Speech Recognition)
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What should be done to improve the transcription quality?</Bold>
+                    <LineBreak/>
+                    Here are the necessary steps to improve the transcription quality:
+                    <LineBreak/>
+                    1. Good quality microphone
+                    <LineBreak/>
+                    Microphone quality matters. If you have a poor quality microphone, the transcription quality is equally poor.
+                    <LineBreak/>
+                    <LineBreak/>
+                    2. Improve speech quality by adjusting settings
+                    <LineBreak/>
+                    Go to Settings -> Time and Languge -> Speech -> Speech Language (Choose English(United States)) -> Microphone (Set up your mic for speech recognition) -> Voices (Choose a voice) -> Voice Speed (Adjust voice speed)
+                    <LineBreak/>
+                    <LineBreak/>
+                    3. Just talk to Gabscriber
+                    <LineBreak/>
+                    The more you talk to Gabscriber, its transcription keeps getting better as it understands your speech nuances better.<LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What are the dictation commands that can be used on this app?</Bold>
+                    <LineBreak/>
+                    The following are the dictation commands that can be used on this app:
+                    <LineBreak/>
+                    - To insert a new line in the document, say "New line".
+                    <LineBreak/>
+                    <LineBreak/>
+                    - To insert a new paragraph in the document, say "New paragraph".
+                    <LineBreak/>
+                    <LineBreak/>
+                    - You can use the following one-symbol punctuation marks: period, comma, colon, semicolon, question mark, exclamation mark, hyphen, and ellipsis. You can also use the following two-symbol punction marks: parentheses and bracket. For one-symbol punctuation marks, just say after the word, "Period", for example. For two-symbol punctuation marks, before the beginning of the word say, "Open Parentheses", and after the word say, "Close Parentheses".
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>Is Gabscriber capable of perfect transcription?</Bold>
+                    <LineBreak/>
+                    Gabscriber is not perfect. It is important for users to review Gabscriber's transcription. 
+                    <LineBreak/>
+                </Paragraph>
+
+                <Paragraph>
+                    <Bold>What should be done if something goes wrong with the app?</Bold>
+                    <LineBreak/>
+                    If something goes wrong with the app, simply turn off and on the app. Make sure that the 3 main app requirements are enabled. If the problem persist, please contact the app developer at support@ellenrapps.com
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+    </Grid>
+
+</Window>
